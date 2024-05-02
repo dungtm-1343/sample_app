@@ -4349,7 +4349,7 @@ Style/MethodDefParentheses:
                  Checks if the method definitions have or don't have
                  parentheses.
   StyleGuide: '#method-parens'
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.16'
   VersionChanged: '1.7'
   EnforcedStyle: require_parentheses
