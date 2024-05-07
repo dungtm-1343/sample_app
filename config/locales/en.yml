@@ -36,3 +36,14 @@ en:
     edit: "Edit this user"
     editing: "Editing user"
     destroy: "Destroy this user"
+    create_account: "Create account"
+    confirmation: "Confirm password"
+    sign_up: "Sign up"
+    name: "Name"
+    email: "Email"
+    password: "Password"
+  activerecord:
+    flash:
+      not_found: "Not found!"
+      success: "Create successfully"
+      error: "Create failed"

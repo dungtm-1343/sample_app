@@ -1,0 +1,30 @@
+<% provide :title, t("users.sign_up") %>
+<h1>
+  <%= t "users.sign_up" %>
+</h1>
+<div class="users-form">
+  <div class="form-content">
+    <%= form_for @user, url: signup_path do |f| %>
+      <div>
+        <%= render "shared/errors_messages" %>  
+      </div>
+      <div>
+        <%= f.label :name, t("users.name") %>
+        <%= f.text_field :name %>
+      </div>
+      <div>
+        <%= f.label :email, t("users.email") %>
+        <%= f.email_field :email %>
+      </div>
+      <div>
+        <%= f.label :password, t("users.password") %>
+        <%= f.password_field :password %>
+      </div>
+      <div>
+        <%= f.label :password_confirmation, t("users.confirmation") %>
+        <%= f.password_field :password_confirmation %>
+      </div>
+      <%= f.submit t("users.create_account"), class: "btn-submit" %>
+    <% end %>
+  </div>
+</div>

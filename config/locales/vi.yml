@@ -36,3 +36,14 @@ vi:
     edit: "Chỉnh sửa người dùng này"
     editing: "Đang chỉnh sửa người dùng"
     destroy: "Xóa người dùng này"
+    create_account: "Tạo tài khoản"
+    confirmation: "Xác nhận mật khẩu"
+    sign_up: "Đăng ký"
+    name: "Tên"
+    email: "Email"
+    password: "Mật khẩu"
+  activerecord:
+    flash:
+      not_found: "Không tìm thấy"
+      success: "Tạo thành công"
+      error: "Tạo thất bại"

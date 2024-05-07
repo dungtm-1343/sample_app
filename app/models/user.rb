@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  ATTRIBUTES = %i[name email password password_confirmation].freeze
+
   validates :name, presence: true, length: { maximum: Settings.users.max_length_name }
   validates :email, presence: true, length: { maximum: Settings.users.max_length_email },
                     format: { with: Regexp.new(Settings.users.EMAIL_REGEX) }, uniqueness: { case_sensitive: false }
