@@ -1,4 +1,4 @@
 users:
   max_length_name: 50
   max_length_email: 255
-  EMAIL_REGEX: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  EMAIL_REGEX: \A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z
