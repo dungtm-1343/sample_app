@@ -17,6 +17,13 @@ vi:
   welcome_subtitle: "Đây là Trang chủ của Sample App!"
   contacts: "Liên hệ"
   contacts_subtitle: "Đây là Trang liên hệ"
+  invalid_login: "Đăng nhập thất bại"
+  profile: "Hồ sơ"
+  account: "Tài khoản"
+  settings: "Cài đặt"
+  logout: "Đăng xuất"
+  login: "Đăng nhập"
+  new_user?: "Người dùng mới?"
   microposts:
     self: "Micropost"
     show: "Hiển thị micropost này"

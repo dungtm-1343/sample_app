@@ -15,6 +15,8 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       flash[:success] = t "activerecord.flash.success"
+      reset_session
+      log_in @user
       redirect_to @user, status: :see_other
     else
       flash[:error] = t "activerecord.flash.error"

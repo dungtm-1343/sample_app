@@ -17,6 +17,13 @@ en:
   welcome_subtitle: "This is Sample App Home Page!"
   contacts: "Contacts"
   contacts_subtitle: "This is Contacts Page"
+  invalid_login: "Login failed"
+  profile: "Profile"
+  account: "Account"
+  settings: "Settings"
+  logout: "Logout"
+  login: "Login"
+  new_user?: "New User?"
   microposts:
     self: "Microposts"
     show: "Show this micropost"
