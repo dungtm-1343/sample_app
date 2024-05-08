@@ -24,6 +24,7 @@ en:
   logout: "Logout"
   login: "Login"
   new_user?: "New User?"
+  remember_me: "Remember me"
   microposts:
     self: "Microposts"
     show: "Show this micropost"

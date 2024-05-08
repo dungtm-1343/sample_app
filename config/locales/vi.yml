@@ -24,6 +24,7 @@ vi:
   logout: "Đăng xuất"
   login: "Đăng nhập"
   new_user?: "Người dùng mới?"
+  remember_me: "Ghi nhớ tôi"
   microposts:
     self: "Micropost"
     show: "Hiển thị micropost này"
