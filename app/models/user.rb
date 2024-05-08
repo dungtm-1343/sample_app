@@ -6,9 +6,12 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: Settings.users.max_length_name }
   validates :email, presence: true, length: { maximum: Settings.users.max_length_email },
                     format: { with: Regexp.new(Settings.users.EMAIL_REGEX) }, uniqueness: { case_sensitive: false }
+  validates :password, presence: true, length: { minimum: Settings.users.min_length_password }, allow_nil: true
   has_secure_password
 
   before_save :downcase_email
+
+  scope :order_by_name, -> { order(:name) }
 
   class << self
     def digest string

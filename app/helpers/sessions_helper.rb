@@ -36,4 +36,16 @@ module SessionsHelper
     reset_session
     @current_user = nil
   end
+
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
+  end
+
+  def logged_in_user
+    return if logged_in?
+
+    store_location
+    flash[:error] = t "require_login"
+    redirect_to login_path
+  end
 end
