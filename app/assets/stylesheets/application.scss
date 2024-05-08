@@ -139,3 +139,21 @@ form {
     margin: 0 0 30px;
   }
 }
+
+.dropdown-menu {
+  display: none!important;
+}
+
+.dropdown-menu.active {
+  position: absolute;
+  top: 100%;
+  right: -2%;
+  display: flex !important;
+  flex-direction: column;
+  width: 100px;
+  background-color: #eee;
+  
+  li {
+    width: 100%;
+  }
+}
