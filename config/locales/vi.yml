@@ -59,8 +59,17 @@ vi:
     update_profile: "Cập nhật hồ sơ"
     delete_successfully: "Xóa người dùng thành công"
     delete_failed: "Xóa người dùng thất bại"
+    activation_mention: "Bạn phải kích hoạt tài khoản trước"
   activerecord:
     flash:
       not_found: "Không tìm thấy"
       success: "Tạo thành công"
       error: "Tạo thất bại"
+  activation:
+    self: "Kích hoạt tài khoản"
+    success: "Tài khoản được kích hoạt thành công!"
+    failed: "Link kích hoạt tài khoản không hợp lệ"
+    not_activated: "Tài khoản chưa được kích hoạt!"
+    mail:
+      title: "Sample App"
+      content: "Chào mừng bạn đến với Sample App! Nhấn vào link bên duới để kích hoạt tài khoản"
