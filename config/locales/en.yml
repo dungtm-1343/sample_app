@@ -59,8 +59,17 @@ en:
     update_profile: "Update your profile"
     delete_successfully: "Delete users successfully"
     delete_failed: "Delete users failed"
+    activation_mention: "You need to activate your account first!"
   activerecord:
     flash:
       not_found: "Not found!"
       success: "Create successfully"
       error: "Create failed"
+  activation:
+    self: "Activate Account"
+    success: "Account activated!"
+    failed: "Invalid activation link"
+    not_activated: "Account is not activated!"
+    mail:
+      title: "Sample App"
+      content: "Welcome to the Sample App! Click on the link below to activate youraccount:"

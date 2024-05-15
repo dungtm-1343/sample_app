@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :user
-  before_action :logged_in_user, except: %i(new)
+  before_action :logged_in_user, except: %i(new create)
   before_action :correct_user, only: %i(delete update edit)
   before_action :admin, only: :destroy
 
@@ -15,10 +15,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = t "activerecord.flash.success"
-      reset_session
-      log_in @user
-      redirect_to @user, status: :see_other
+      @user.send_activation_mail
+      flash[:info] = t "users.activation_mention"
+      redirect_to root_path, status: :see_other
     else
       flash[:error] = t "activerecord.flash.error"
       render :new, status: :unprocessable_entity
