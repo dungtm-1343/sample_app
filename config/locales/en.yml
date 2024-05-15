@@ -30,6 +30,12 @@ en:
   auth_failed: "You do not have permission to access that page"
   sure: "Are you sure?"
   change: "Change"
+  forgot_password: "Forgot Password?"
+  reset_password: "Reset Password"
+  submit: "Submit"
+  password_reset_mail_sent: "Password Reset email is sent"
+  reset_password_details: "This link will expire in two hours."
+  update_password: "Update password"
   microposts:
     self: "Microposts"
     show: "Show this micropost"
@@ -60,6 +66,9 @@ en:
     delete_successfully: "Delete users successfully"
     delete_failed: "Delete users failed"
     activation_mention: "You need to activate your account first!"
+    unactivated: "This account is unactivated!"
+    invalid_password: "Invalid password"
+    password_reset_expired: "Password reset was expired"
   activerecord:
     flash:
       not_found: "Not found!"
