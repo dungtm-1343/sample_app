@@ -6,3 +6,4 @@ users:
   users_per_page: 6
   user_avatar_size: 50
   default_user_avatar_size: 80
+  reset_expired: 2

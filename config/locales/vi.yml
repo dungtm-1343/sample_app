@@ -30,6 +30,12 @@ vi:
   auth_failed: "Bạn không có quyền truy cập trang này"
   sure: "Bạn có chắc không?"
   change: "Thay đổi"
+  forgot_password: "Quên mật khẩu?"
+  reset_password: "Khôi phục mật khẩu"
+  submit: "Xác nhận"
+  password_reset_mail_sent: "Email khôi phục đã được gửi"
+  reset_password_details: "Link này sẽ hết hạn sau 2 giờ nữa."
+  update_password: "Cập nhật mật khẩu"
   microposts:
     self: "Micropost"
     show: "Hiển thị micropost này"
@@ -60,6 +66,9 @@ vi:
     delete_successfully: "Xóa người dùng thành công"
     delete_failed: "Xóa người dùng thất bại"
     activation_mention: "Bạn phải kích hoạt tài khoản trước"
+    unactivated: "Tài khoản chưa được kích hoạt!"
+    invalid_password: "Mật khẩu không đúng định dạng"
+    password_reset_expired: "Yêu cầu khôi phục mật khẩu hết hạn"
   activerecord:
     flash:
       not_found: "Không tìm thấy"
