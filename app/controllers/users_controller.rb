@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
   before_action :user
   before_action :logged_in_user, except: %i(new create)
-  before_action :correct_user, only: %i(delete update edit)
+  before_action :correct_user, only: %i(update)
   before_action :admin, only: :destroy
 
   def index
-    @pagy, @users = pagy(User.order_by_name, items: Settings.users.users_per_page)
+    @pagy, @users = pagy(User.order_by_name,
+                         items: Settings.users.users_per_page)
   end
 
   def new
@@ -41,6 +42,11 @@ class UsersController < ApplicationController
       flash[:error] = t "users.delete_failed"
     end
     redirect_to users_path
+  end
+
+  def show
+    @pagy, @microposts = pagy @user.microposts,
+                              items: Settings.microposts.items_per_page
   end
 
   private

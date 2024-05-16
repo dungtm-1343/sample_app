@@ -36,6 +36,7 @@ en:
   password_reset_mail_sent: "Password Reset email is sent"
   reset_password_details: "This link will expire in two hours."
   update_password: "Update password"
+  error: "error"
   microposts:
     self: "Microposts"
     show: "Show this micropost"
@@ -44,6 +45,17 @@ en:
     edit: "Edit this micropost"
     editing: "Editing micropost"
     destroy: "Destroy this micropost"
+    delete: "Delete this micropost"
+    delete_success: "Delete micropost successfully!"
+    delete_failed: "Delete micropost failed!"
+    ago: " ago"
+    posted: "Posted "
+    create_success: "Create micropost successfully!"
+    create_failed: "Create micropost failed!"
+    placeholder: "Write your micropost content here!"
+    feed: "Feed"
+    image_format: "must be an image format"
+    image_size: "should be less than 5MB"
   form_prohibit: " prohibited this user from being saved:"
   users:
     self: "Users"
@@ -69,6 +81,7 @@ en:
     unactivated: "This account is unactivated!"
     invalid_password: "Invalid password"
     password_reset_expired: "Password reset was expired"
+    view_profile: "View my profile"
   activerecord:
     flash:
       not_found: "Not found!"

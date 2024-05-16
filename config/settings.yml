@@ -7,3 +7,9 @@ users:
   user_avatar_size: 50
   default_user_avatar_size: 80
   reset_expired: 2
+microposts:
+  resize_image: [500, 500]
+  max_length_content: 140
+  image_type: ['image/png', 'image/jpg', 'image/jpeg']
+  image_size: 5
+  image_type_accepted: "image/jpeg, image/gif, image/png"
