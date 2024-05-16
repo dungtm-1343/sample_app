@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :user
-  before_action :logged_in_user, except: %i(new create)
-  before_action :correct_user, only: %i(update)
+  before_action :logged_in_user, except: %i(new create show)
+  before_action :correct_user, only: %i(delete update edit)
   before_action :admin, only: :destroy
 
   def index
@@ -45,8 +45,20 @@ class UsersController < ApplicationController
   end
 
   def show
-    @pagy, @microposts = pagy @user.microposts,
-                              items: Settings.microposts.items_per_page
+    @pagy, @microposts = pagy @user.microposts, items: Settings.microposts.items_per_page
+    @microposts_count = @user.microposts.count
+  end
+
+  def following
+    @title = t "users.following" 
+    @pagy, @users = pagy @user.following, items: Settings.microposts.items_per_page
+    render :show_follow
+  end
+
+  def followers
+    @title = t "users.followers"
+    @pagy, @users = pagy @user.followers, items: Settings.microposts.items_per_page
+    render :show_follow
   end
 
   private

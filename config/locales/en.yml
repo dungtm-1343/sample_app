@@ -82,6 +82,11 @@ en:
     invalid_password: "Invalid password"
     password_reset_expired: "Password reset was expired"
     view_profile: "View my profile"
+    following: "Users following"
+    followers: "Users followers"
+    show_follow: "All Follows"
+    follow: "Follow"
+    unfollow: "Unfollow"
   activerecord:
     flash:
       not_found: "Not found!"
