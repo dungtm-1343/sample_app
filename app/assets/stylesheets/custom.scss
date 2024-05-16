@@ -60,6 +60,7 @@ a {
 
   .container {
     margin-top: 100px;
+    width: 100%;
 
     .content {
       display: flex;
@@ -141,7 +142,7 @@ form {
 }
 
 .dropdown-menu {
-  display: none!important;
+  display: none !important;
 }
 
 .dropdown-menu.active {
@@ -152,7 +153,7 @@ form {
   flex-direction: column;
   width: 100px;
   background-color: #eee;
-  
+
   li {
     width: 100%;
   }
@@ -161,10 +162,96 @@ form {
 .users {
   display: flex;
   flex-wrap: wrap;
-  width: 80vw;
+  width: 100vw;
 
   li {
     width: 50%;
     margin-top: 20px;
   }
+
+  aside {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    textarea {
+      height: 100px;
+      margin-bottom: 5px;
+    }
+  }
+
+  div.col-md-8 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      width: 90%;
+    }
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+
+  input {
+    border: 0;
+  }
+}
+
+.microposts {
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+  .content {
+    display: block;
+    margin-left: 60px;
+
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+
+  .timestamp {
+    color: gray;
+    display: block;
+    margin-left: 60px;
+    margin-bottom: 20px;
+  }
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+.col-md-4 {
+  width: 33%;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.col-md-8 {
+  width: 66%;
 }

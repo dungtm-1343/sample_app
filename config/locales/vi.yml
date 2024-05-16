@@ -36,6 +36,7 @@ vi:
   password_reset_mail_sent: "Email khôi phục đã được gửi"
   reset_password_details: "Link này sẽ hết hạn sau 2 giờ nữa."
   update_password: "Cập nhật mật khẩu"
+  error: "lỗi"
   microposts:
     self: "Micropost"
     show: "Hiển thị micropost này"
@@ -44,6 +45,17 @@ vi:
     edit: "Chỉnh sửa micropost này"
     editing: "Đang chỉnh sửa micropost"
     destroy: "Xóa micropost này"
+    delete: "Xóa micropost này"
+    delete_success: "Xóa micropost thành công!"
+    delete_failed: "Xóa micropost thất bại!"
+    ago: " trước"
+    posted: "Đã đăng "
+    create_success: "Tạo micropost thành công!"
+    create_failed: "Tạo micropost thất bại!"
+    placeholder: "Viết micropost của bạn tại đây!"
+    feed: "Bảng tin"
+    image_format: "phải là ảnh"
+    image_size: "cần nhỏ hơn 5MB"
   form_prohibit: " đã ngăn không cho lưu người dùng này:"
   users:
     self: "Người dùng"
@@ -69,6 +81,7 @@ vi:
     unactivated: "Tài khoản chưa được kích hoạt!"
     invalid_password: "Mật khẩu không đúng định dạng"
     password_reset_expired: "Yêu cầu khôi phục mật khẩu hết hạn"
+    view_profile: "Xem hồ sơ"
   activerecord:
     flash:
       not_found: "Không tìm thấy"

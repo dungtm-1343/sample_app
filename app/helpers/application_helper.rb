@@ -1,4 +1,3 @@
-# This ApplicationHelper is a module that provides helper methods to be used across the application.
 # frozen_string_literal: true
 
 module ApplicationHelper

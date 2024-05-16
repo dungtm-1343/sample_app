@@ -1,18 +1,24 @@
 class User < ApplicationRecord
-  ATTRIBUTES = %i[name email password password_confirmation].freeze
+  ATTRIBUTES = %i(name email password password_confirmation).freeze
 
   attr_accessor :remember_token, :activation_token, :reset_token
 
-  validates :name, presence: true, length: { maximum: Settings.users.max_length_name }
-  validates :email, presence: true, length: { maximum: Settings.users.max_length_email },
-                    format: { with: Regexp.new(Settings.users.EMAIL_REGEX) }, uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: Settings.users.min_length_password }, allow_nil: true
+  validates :name, presence: true,
+length: {maximum: Settings.users.max_length_name}
+  validates :email, presence: true,
+                    length: {maximum: Settings.users.max_length_email},
+                    format: {with: Regexp.new(Settings.users.EMAIL_REGEX)},
+                    uniqueness: {case_sensitive: false}
+  validates :password, presence: true,
+length: {minimum: Settings.users.min_length_password}, allow_nil: true
   has_secure_password
+
+  has_many :microposts, dependent: :destroy
 
   before_save :downcase_email
   before_create :create_activation_digest
 
-  scope :order_by_name, -> { order(:name) }
+  scope :order_by_name, ->{order(:name)}
 
   class << self
     def digest string
@@ -64,7 +70,12 @@ class User < ApplicationRecord
 
   def create_reset_digest
     self.reset_token = User.new_token
-    update_columns reset_digest: User.digest(reset_token), reset_sent_at: Time.zone.now
+    update_columns reset_digest: User.digest(reset_token),
+                   reset_sent_at: Time.zone.now
+  end
+
+  def feed
+    microposts
   end
 
   private
