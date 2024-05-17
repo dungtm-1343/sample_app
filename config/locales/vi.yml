@@ -82,6 +82,11 @@ vi:
     invalid_password: "Mật khẩu không đúng định dạng"
     password_reset_expired: "Yêu cầu khôi phục mật khẩu hết hạn"
     view_profile: "Xem hồ sơ"
+    following: "Người đang theo dõi"
+    followers: "Nguời theo dõi"
+    show_follow: "Tất cả theo dõi"
+    follow: "Theo dõi"
+    unfollow: "Hủy theo dõi"
   activerecord:
     flash:
       not_found: "Không tìm thấy"

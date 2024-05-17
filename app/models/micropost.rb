@@ -14,5 +14,6 @@ length: {maximum: Settings.microposts.max_length_content}
                     size: {less_than: Settings.microposts.image_size.megabytes,
                            message: I18n.t("microposts.image_size")}
 
-  scope :newest, ->{order created_at: :desc}
+  scope :newest, -> { order created_at: :desc }
+  scope :relate_post, ->(user_ids) { where user_id: user_ids }
 end
